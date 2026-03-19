@@ -10,3 +10,4 @@ npm install -g sequelize-cli para installar eso xcomo su paquete visual cm2
 npm install --save sequelize 
 npm install --save mysql2 depende de que motor de bd vamos a ocupar
 sequelize init estructura de las carpetas
+npm install dotenv para installar
