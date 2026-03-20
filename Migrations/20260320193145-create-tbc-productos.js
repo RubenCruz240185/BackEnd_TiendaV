@@ -27,7 +27,14 @@ module.exports = {
         defaultValue: 0
       },
       id_categoria: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'tbc_categorias',
+          key: 'id'
+        },
+        onUpdate: 'NO ACTION',//'CASCADE',
+        onDelete: 'NO ACTION'//'RESTRICT'
       },
       createdAt: {
         allowNull: false,

@@ -18,3 +18,10 @@ npx sequelize-cli model:generate --name tbc_categorias --attributes "nombre:stri
 sequelize-cli db:migrate
 para revertir ocupamos sequelize db:migrate:undo:all
 y volvemos a migrar
+//--------------------
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=1234
+DB_NAME=db_tiendavirtual
+DB_PORT=3307
+----------//
