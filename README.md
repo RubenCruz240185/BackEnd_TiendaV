@@ -11,3 +11,10 @@ npm install --save sequelize
 npm install --save mysql2 depende de que motor de bd vamos a ocupar
 sequelize init estructura de las carpetas
 npm install dotenv para installar
+sequelize model:generate --name tbc_usuarios --attributes ...:string...
+npx sequelize-cli model:generate --name tbc_categorias --attributes nombre:string
+# Si tu terminal no lo toma, usa comillas:
+npx sequelize-cli model:generate --name tbc_categorias --attributes "nombre:string"
+sequelize-cli db:migrate
+para revertir ocupamos sequelize db:migrate:undo:all
+y volvemos a migrar
