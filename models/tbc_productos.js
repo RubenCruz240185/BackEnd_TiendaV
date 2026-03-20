@@ -14,11 +14,21 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   tbc_productos.init({
-    nombre: DataTypes.STRING,
-    descripcion: DataTypes.STRING,
-    precio: DataTypes.STRING,
-    stock: DataTypes.STRING,
-    id_categoria: DataTypes.STRING
+    nombre:{ 
+      type: DataTypes.STRING(100), 
+      allowNull: false },
+    descripcion: { 
+      type: DataTypes.STRING(255), 
+      allowNull: true },
+    precio: { 
+      type: DataTypes.DECIMAL(10, 2), 
+      allowNull: false },
+    stock: { 
+      type: DataTypes.INTEGER, 
+      allowNull: false, defaultValue: 0 },
+    id_categoria: { 
+      type: DataTypes.STRING, 
+      allowNull: false }
   }, {
     sequelize,
     modelName: 'tbc_productos',
