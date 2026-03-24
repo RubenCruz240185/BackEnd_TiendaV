@@ -35,10 +35,14 @@ module.exports = (sequelize, DataTypes) => {
   });
   tbc_productos.associate = function(models) {
     // Relación con tbc_categorias
-    tbc_productos.belongsTo(models.tbc_categorias, 
-      {
+    tbc_productos.belongsTo(models.tbc_categorias, {
       foreignKey: 'id_categoria',
       as: 'tbc_categorias'
+    });
+    // Relación con tbc_carrito_detalle
+    tbc_productos.hasMany(models.tbc_carrito_detalle, {
+      foreignKey: 'id_producto',
+      as: 'tbc_carrito_detalles'
     });
   };
   return tbc_productos;

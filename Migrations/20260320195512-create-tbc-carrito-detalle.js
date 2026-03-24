@@ -10,16 +10,32 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_carrito: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'tbc_carritos',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       precio_unitario: {
-        type: Sequelize.STRING
+        type: Sequelize.DECIMAL(10, 2),
+        allowNull: false
       },
       cantidad: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        allowNull: false
       },
       id_producto: {
-        type: Sequelize.STRING
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: 'tbc_productos',
+          key: 'id'
+        },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE'
       },
       createdAt: {
         allowNull: false,
