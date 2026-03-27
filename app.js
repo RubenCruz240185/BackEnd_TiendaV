@@ -12,6 +12,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.get('/', (req, res)=> res.status(200).send({
     message: 'welcome to my API from Tienda EmaNem',
 }));
+require('./routes/route_categoria')(app);
+//require('./routes/route_producto')(app);
+//require('./routes/route_usuario')(app);
 
 const port = parseInt(process.env.PORT,10) || 8000;
 app.set('port', port);
