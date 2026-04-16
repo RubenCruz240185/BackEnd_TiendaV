@@ -17,6 +17,7 @@ require('./routes/route_productos')(app);
 require('./routes/route_carritos')(app);
 require('./routes/route_carrito_detalle')(app);
 require('./routes/route_usuario')(app);
+require('./routes/route_login')(app);
 
 const port = parseInt(process.env.PORT,10) || 8000;
 app.set('port', port);
