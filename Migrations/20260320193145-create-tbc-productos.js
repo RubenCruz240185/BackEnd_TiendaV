@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: false
       },
+      imagen: {
+        type: Sequelize.STRING(255),
+        allowNull: true
+      },
       descripcion: {
         type: Sequelize.STRING(255),
         allowNull: true

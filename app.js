@@ -1,10 +1,17 @@
 const express = require('express');
 const logger = require('morgan');
+const cors = require('cors');
+
 const bodyParser = require('body-parser');
 
 const http = require('http');
+const { h } = require('vue');
 const app = express();
-
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+}));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
